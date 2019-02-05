@@ -1,0 +1,7 @@
+name: rclone
+description: |
+  Bender rclone container
+version: 1
+category: tools
+license: fuck off license
+maintainer: Bender

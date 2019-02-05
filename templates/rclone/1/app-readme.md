@@ -1,0 +1,1 @@
+test-application in custom catalog

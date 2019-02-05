@@ -1,0 +1,8 @@
+.catalog:
+  name: "rclone"
+  version: "v1"
+  description: "Rclone from Benders repo"
+  
+rclone:
+  scale: 1
+  start_on_create: true

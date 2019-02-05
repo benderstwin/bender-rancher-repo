@@ -1,0 +1,18 @@
+version: '2'
+services:
+  rclone:
+    cap_add:
+    - SYS_ADMIN
+    image: mumiehub/rclone-mount
+    environment:
+      RemotePath: 'gcrypt:'
+      MountCommands: --allow-other --allow-non-empty
+      ConfigName: rclone.conf
+    devices:
+    - /dev/fuse:/dev/fuse:rwm
+    volumes:
+    - '/appdata/rclone:/config'
+    - '/media:/mnt/gmedia:shared'
+    labels:
+      io.rancher.container.pull_image: always
+      io.rancher.container.hostname_override: container_name
